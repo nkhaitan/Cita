@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "PullRefreshTableViewController.h"
 
-@interface UpdatesCell : UITableViewCell
+@interface UpdateLocationCells : UITableViewCell
 @end
 
 @interface LocationViewController : PullRefreshTableViewController <UITextFieldDelegate>

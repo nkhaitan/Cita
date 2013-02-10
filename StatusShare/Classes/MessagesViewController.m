@@ -7,12 +7,30 @@
 //
 
 #import "MessagesViewController.h"
+#import <KinveyKit/KinveyKit.h>
+#import "KinveyFriendsUpdate.h"
+#import "AuthorViewController.h"
+#import "GravatarStore.h"
+#import "UIColor+KinveyHelpers.h"
+#import "UpdateCell.h"
 
 @interface MessagesViewController ()
+
+@property (nonatomic,retain) NSArray* messages;
+@property (nonatomic,retain) KCSCachedStore* messagesStore;
+
+-(void) updateList;
+
+@end
+
+@implementation UpdateMessageCells
 
 @end
 
 @implementation MessagesViewController
+
+@synthesize messages;
+@synthesize messagesStore;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +44,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.backgroundColor = [UIColor colorWithIntRed:250 green:250 blue:250];
+    KCSCollection* collection = [KCSCollection collectionFromString:@"Updates" ofClass:[KinveyFriendsUpdate class]];
+    self.messagesStore = [KCSLinkedAppdataStore storeWithOptions:[NSDictionary dictionaryWithObjectsAndKeys:collection, KCSStoreKeyResource, [NSNumber numberWithInt:KCSCachePolicyBoth], KCSStoreKeyCachePolicy, nil]];
+    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -59,12 +81,22 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *messagecell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    if (!messagecell)
+    {
+        messagecell = [[UpdateMessageCells alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
     
-    return cell;
+    return messagecell;
 }
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -104,6 +136,41 @@
     return YES;
 }
 */
+
+- (void) updateList
+{
+    KCSQuery* query = [KCSQuery query];
+    KCSQuerySortModifier* sortByDate = [[KCSQuerySortModifier alloc] initWithField:@"userDate" inDirection:kKCSDescending];
+    [query addSortModifier:sortByDate];
+    [query setLimitModifer:[[KCSQueryLimitModifier alloc] initWithLimit:10]];
+    [messagesStore queryWithQuery:query withCompletionBlock:^(NSArray *objectsOrNil, NSError *errorOrNil) {
+        if (objectsOrNil) {
+            [self performSelector:@selector(stopLoading) withObject:nil afterDelay:2.0];
+            self.messages = objectsOrNil;
+            [self.tableView reloadData];
+        }
+    } withProgressBlock:nil];
+    
+    
+}
+
+#pragma mark - Text Field
+- (BOOL) textFieldShouldEndEditing:(UITextField *)textField
+{
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)refresh
+{
+    [self updateList];
+}
+
 
 #pragma mark - Table view delegate
 

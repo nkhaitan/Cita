@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PullRefreshTableViewController.h"
 
-@interface UpdatesCell : UITableViewCell
+@interface UpdateConnectionCell : UITableViewCell
 @end
 
 @interface ConnectionsViewController : PullRefreshTableViewController <UITextFieldDelegate>

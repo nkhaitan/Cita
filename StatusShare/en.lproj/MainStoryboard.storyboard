@@ -652,6 +652,7 @@ new account</string>
         <class className="LoginViewContoller" superclassName="FormViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewContoller.h"/>
             <relationships>
+                <relationship kind="action" name="createAccount:"/>
                 <relationship kind="action" name="login:"/>
                 <relationship kind="action" name="loginWithFacebook:"/>
                 <relationship kind="outlet" name="createAccountButton" candidateClass="UIButton"/>

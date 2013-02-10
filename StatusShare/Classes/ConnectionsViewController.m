@@ -7,12 +7,29 @@
 //
 
 #import "ConnectionsViewController.h"
+#import <KinveyKit/KinveyKit.h>
+#import "KinveyFriendsUpdate.h"
+#import "AuthorViewController.h"
+#import "GravatarStore.h"
+#import "UIColor+KinveyHelpers.h"
+#import "UpdateCell.h"
 
 @interface ConnectionsViewController ()
+
+@property (nonatomic,retain) NSArray* connections;
+@property (nonatomic,retain) KCSCachedStore* connectionStore;
+
+-(void) updateList;
+@end
+
+@implementation UpdateConnectionCell
 
 @end
 
 @implementation ConnectionsViewController
+
+@synthesize connections;
+@synthesize connectionStore;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +43,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.backgroundColor = [UIColor colorWithIntRed:250 green:250 blue:250];
+    KCSCollection* collection = [KCSCollection collectionFromString:@"Updates" ofClass:[KinveyFriendsUpdate class]];
+    self.connectionStore = [KCSLinkedAppdataStore storeWithOptions:[NSDictionary dictionaryWithObjectsAndKeys:collection, KCSStoreKeyResource, [NSNumber numberWithInt:KCSCachePolicyBoth], KCSStoreKeyCachePolicy, nil]];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -34,11 +54,24 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self updateList];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
 
 #pragma mark - Table view data source
 
@@ -59,11 +92,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *connectioncell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
-    return cell;
+    if (!connectioncell)
+    {
+        connectioncell = [[UpdateConnectionCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+    return connectioncell;
 }
 
 /*
@@ -104,6 +140,22 @@
     return YES;
 }
 */
+- (void) updateList
+{
+    KCSQuery* query = [KCSQuery query];
+    KCSQuerySortModifier* sortByDate = [[KCSQuerySortModifier alloc] initWithField:@"userDate" inDirection:kKCSDescending];
+    [query addSortModifier:sortByDate];
+    [query setLimitModifer:[[KCSQueryLimitModifier alloc] initWithLimit:10]];
+    [connectionStore queryWithQuery:query withCompletionBlock:^(NSArray *objectsOrNil, NSError *errorOrNil) {
+        if (objectsOrNil) {
+            [self performSelector:@selector(stopLoading) withObject:nil afterDelay:2.0];
+            self.connections = objectsOrNil;
+            [self.tableView reloadData];
+        }
+    } withProgressBlock:nil];
+
+    
+}
 
 #pragma mark - Table view delegate
 
@@ -117,5 +169,27 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
+
+#pragma mark - Text Field
+- (BOOL) textFieldShouldEndEditing:(UITextField *)textField
+{
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)refresh
+{
+    [self updateList];
+}
+
+
+
+
 
 @end

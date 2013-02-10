@@ -7,12 +7,29 @@
 //
 
 #import "LocationViewController.h"
+#import <KinveyKit/KinveyKit.h>
+#import "KinveyFriendsUpdate.h"
+#import "AuthorViewController.h"
+#import "GravatarStore.h"
+#import "UIColor+KinveyHelpers.h"
+#import "UpdateCell.h"
+
+@implementation UpdateLocationCells
+
+@end
 
 @interface LocationViewController ()
+@property (nonatomic, retain) NSArray* locations;
+@property (nonatomic, retain) KCSCachedStore* locationStore;
+
+-(void) updateList;
 
 @end
 
 @implementation LocationViewController
+
+@synthesize locations;
+@synthesize locationStore;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +43,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.tableView.backgroundColor = [UIColor colorWithIntRed:250 green:250 blue:250];
+    
+    KCSCollection* collection = [KCSCollection collectionFromString:@"Updates" ofClass:[KinveyFriendsUpdate class]];
+    self.locationStore = [KCSLinkedAppdataStore storeWithOptions:[NSDictionary dictionaryWithObjectsAndKeys:collection, KCSStoreKeyResource, [NSNumber numberWithInt:KCSCachePolicyBoth], KCSStoreKeyCachePolicy, nil]];
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -38,6 +60,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self updateList];
 }
 
 #pragma mark - Table view data source
@@ -59,11 +88,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *locationcell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    if (!locationcell)
+    {
+        locationcell = [[UpdateLocationCells alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
     
-    return cell;
+    return locationcell;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 /*
@@ -105,6 +143,22 @@
 }
 */
 
+- (void) updateList
+{
+    KCSQuery* query = [KCSQuery query];
+    KCSQuerySortModifier* sortByDate = [[KCSQuerySortModifier alloc] initWithField:@"userDate" inDirection:kKCSDescending];
+    [query addSortModifier:sortByDate];
+    [query setLimitModifer:[[KCSQueryLimitModifier alloc] initWithLimit:10]];
+    [locationStore queryWithQuery:query withCompletionBlock:^(NSArray *objectsOrNil, NSError *errorOrNil) {
+        if (objectsOrNil) {
+            [self performSelector:@selector(stopLoading) withObject:nil afterDelay:2.0];
+            self.locations = objectsOrNil;
+            [self.tableView reloadData];
+        }
+    } withProgressBlock:nil];
+}
+
+    
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -117,5 +171,23 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
+#pragma mark - Text Field
+- (BOOL) textFieldShouldEndEditing:(UITextField *)textField
+{
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)refresh
+{
+    [self updateList];
+}
+
 
 @end

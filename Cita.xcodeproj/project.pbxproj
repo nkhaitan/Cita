@@ -57,6 +57,10 @@
 		2A510E6316D2B731001CF2FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A510E6116D2B731001CF2FF /* InfoPlist.strings */; };
 		2A510E6516D2B88E001CF2FF /* Cita-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A510E6416D2B88E001CF2FF /* Cita-Info.plist */; };
 		2A510E6816D2B8F3001CF2FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A510E6616D2B8F3001CF2FF /* InfoPlist.strings */; };
+		2AA6F39916D2C1F000948D6C /* Button Widgets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F39516D2C1F000948D6C /* Button Widgets */; };
+		2AA6F39A16D2C1F000948D6C /* CG Helpers in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F39616D2C1F000948D6C /* CG Helpers */; };
+		2AA6F39B16D2C1F000948D6C /* Foundation Categories in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F39716D2C1F000948D6C /* Foundation Categories */; };
+		2AA6F39C16D2C1F000948D6C /* UIKit Categories in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F39816D2C1F000948D6C /* UIKit Categories */; };
 		452843D912854F5CA5BA586C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828258A0BC7940E6BD310385 /* CFNetwork.framework */; };
 		77EFB1D10C144B6299B7E90E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0864244EB4EB4378A013D2A4 /* StoreKit.framework */; };
 		7CD1A1CD88E044888917EA86 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4A168F34A6432793DC5300 /* libsqlite3.dylib */; };
@@ -144,6 +148,10 @@
 		2A510E6216D2B731001CF2FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = CitaTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		2A510E6416D2B88E001CF2FF /* Cita-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Cita-Info.plist"; path = "Cita/Cita-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2A510E6716D2B8F3001CF2FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Cita/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		2AA6F39516D2C1F000948D6C /* Button Widgets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Button Widgets"; sourceTree = SOURCE_ROOT; };
+		2AA6F39616D2C1F000948D6C /* CG Helpers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "CG Helpers"; sourceTree = SOURCE_ROOT; };
+		2AA6F39716D2C1F000948D6C /* Foundation Categories */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Foundation Categories"; sourceTree = SOURCE_ROOT; };
+		2AA6F39816D2C1F000948D6C /* UIKit Categories */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "UIKit Categories"; sourceTree = SOURCE_ROOT; };
 		7C2A411236F24BF68A700F43 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		828258A0BC7940E6BD310385 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		90DEBB80DA534A469FC9F2AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -329,6 +337,7 @@
 		27E6B335159E3D0300280BC7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				2AA6F39416D2C1A500948D6C /* iOS-UI-Utils */,
 				2A510E2816D2B643001CF2FF /* GravatarStore.h */,
 				2A510E2916D2B643001CF2FF /* GravatarStore.m */,
 				2A510E2A16D2B643001CF2FF /* MD5Helpers.h */,
@@ -416,6 +425,17 @@
 			name = Messages;
 			sourceTree = "<group>";
 		};
+		2AA6F39416D2C1A500948D6C /* iOS-UI-Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2AA6F39516D2C1F000948D6C /* Button Widgets */,
+				2AA6F39616D2C1F000948D6C /* CG Helpers */,
+				2AA6F39716D2C1F000948D6C /* Foundation Categories */,
+				2AA6F39816D2C1F000948D6C /* UIKit Categories */,
+			);
+			name = "iOS-UI-Utils";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -483,6 +503,10 @@
 				2A510E6316D2B731001CF2FF /* InfoPlist.strings in Resources */,
 				2A510E6516D2B88E001CF2FF /* Cita-Info.plist in Resources */,
 				2A510E6816D2B8F3001CF2FF /* InfoPlist.strings in Resources */,
+				2AA6F39916D2C1F000948D6C /* Button Widgets in Resources */,
+				2AA6F39A16D2C1F000948D6C /* CG Helpers in Resources */,
+				2AA6F39B16D2C1F000948D6C /* Foundation Categories in Resources */,
+				2AA6F39C16D2C1F000948D6C /* UIKit Categories in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

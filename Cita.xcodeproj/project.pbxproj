@@ -57,10 +57,24 @@
 		2A510E6316D2B731001CF2FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A510E6116D2B731001CF2FF /* InfoPlist.strings */; };
 		2A510E6516D2B88E001CF2FF /* Cita-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A510E6416D2B88E001CF2FF /* Cita-Info.plist */; };
 		2A510E6816D2B8F3001CF2FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A510E6616D2B8F3001CF2FF /* InfoPlist.strings */; };
-		2AA6F39916D2C1F000948D6C /* Button Widgets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F39516D2C1F000948D6C /* Button Widgets */; };
-		2AA6F39A16D2C1F000948D6C /* CG Helpers in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F39616D2C1F000948D6C /* CG Helpers */; };
-		2AA6F39B16D2C1F000948D6C /* Foundation Categories in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F39716D2C1F000948D6C /* Foundation Categories */; };
-		2AA6F39C16D2C1F000948D6C /* UIKit Categories in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F39816D2C1F000948D6C /* UIKit Categories */; };
+		2AA6F3E116D2C32E00948D6C /* KWLinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F3C616D2C32E00948D6C /* KWLinkButton.m */; };
+		2AA6F3E216D2C32E00948D6C /* KWSocialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F3C816D2C32E00948D6C /* KWSocialButton.m */; };
+		2AA6F3E316D2C32E00948D6C /* MKGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F3CA16D2C32E00948D6C /* MKGradientButton.m */; };
+		2AA6F3E416D2C32E00948D6C /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F3CC16D2C32E00948D6C /* facebook.png */; };
+		2AA6F3E516D2C32E00948D6C /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F3CD16D2C32E00948D6C /* facebook@2x.png */; };
+		2AA6F3E616D2C32E00948D6C /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F3CE16D2C32E00948D6C /* twitter.png */; };
+		2AA6F3E716D2C32E00948D6C /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F3CF16D2C32E00948D6C /* twitter@2x.png */; };
+		2AA6F3E816D2C32E00948D6C /* MKCGTypeHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F3D216D2C32E00948D6C /* MKCGTypeHelpers.m */; };
+		2AA6F3E916D2C32E00948D6C /* MD5Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F3D516D2C32E00948D6C /* MD5Helpers.m */; };
+		2AA6F3EA16D2C32E00948D6C /* NSArray+MKHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F3D716D2C32E00948D6C /* NSArray+MKHelpers.m */; };
+		2AA6F3EB16D2C32E00948D6C /* NSString+MKHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F3D916D2C32E00948D6C /* NSString+MKHelpers.m */; };
+		2AA6F3EC16D2C32E00948D6C /* UIColor+MKHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F3DC16D2C32E00948D6C /* UIColor+MKHelpers.m */; };
+		2AA6F3ED16D2C32E00948D6C /* UILabel+MKHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F3DE16D2C32E00948D6C /* UILabel+MKHelpers.m */; };
+		2AA6F3EE16D2C32E00948D6C /* UIWindow+MKHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F3E016D2C32E00948D6C /* UIWindow+MKHelpers.m */; };
+		2AA6F3F516D2C37E00948D6C /* KWGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F3F116D2C37E00948D6C /* KWGradientView.m */; };
+		2AA6F3F616D2C37E00948D6C /* KWLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F3F316D2C37E00948D6C /* KWLineView.m */; };
+		2AA6F3F716D2C37E00948D6C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2AA6F3F416D2C37E00948D6C /* README.md */; };
+		2AA6F3FA16D2C3F800948D6C /* UIColor+KinveyWidgets.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA6F3F916D2C3F800948D6C /* UIColor+KinveyWidgets.m */; };
 		452843D912854F5CA5BA586C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828258A0BC7940E6BD310385 /* CFNetwork.framework */; };
 		77EFB1D10C144B6299B7E90E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0864244EB4EB4378A013D2A4 /* StoreKit.framework */; };
 		7CD1A1CD88E044888917EA86 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4A168F34A6432793DC5300 /* libsqlite3.dylib */; };
@@ -148,10 +162,37 @@
 		2A510E6216D2B731001CF2FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = CitaTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		2A510E6416D2B88E001CF2FF /* Cita-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Cita-Info.plist"; path = "Cita/Cita-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2A510E6716D2B8F3001CF2FF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Cita/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
-		2AA6F39516D2C1F000948D6C /* Button Widgets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Button Widgets"; sourceTree = SOURCE_ROOT; };
-		2AA6F39616D2C1F000948D6C /* CG Helpers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "CG Helpers"; sourceTree = SOURCE_ROOT; };
-		2AA6F39716D2C1F000948D6C /* Foundation Categories */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Foundation Categories"; sourceTree = SOURCE_ROOT; };
-		2AA6F39816D2C1F000948D6C /* UIKit Categories */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "UIKit Categories"; sourceTree = SOURCE_ROOT; };
+		2AA6F3C516D2C32E00948D6C /* KWLinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWLinkButton.h; sourceTree = "<group>"; };
+		2AA6F3C616D2C32E00948D6C /* KWLinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLinkButton.m; sourceTree = "<group>"; };
+		2AA6F3C716D2C32E00948D6C /* KWSocialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWSocialButton.h; sourceTree = "<group>"; };
+		2AA6F3C816D2C32E00948D6C /* KWSocialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWSocialButton.m; sourceTree = "<group>"; };
+		2AA6F3C916D2C32E00948D6C /* MKGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKGradientButton.h; sourceTree = "<group>"; };
+		2AA6F3CA16D2C32E00948D6C /* MKGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKGradientButton.m; sourceTree = "<group>"; };
+		2AA6F3CC16D2C32E00948D6C /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		2AA6F3CD16D2C32E00948D6C /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook@2x.png"; sourceTree = "<group>"; };
+		2AA6F3CE16D2C32E00948D6C /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
+		2AA6F3CF16D2C32E00948D6C /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
+		2AA6F3D116D2C32E00948D6C /* MKCGTypeHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKCGTypeHelpers.h; sourceTree = "<group>"; };
+		2AA6F3D216D2C32E00948D6C /* MKCGTypeHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKCGTypeHelpers.m; sourceTree = "<group>"; };
+		2AA6F3D416D2C32E00948D6C /* MD5Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Helpers.h; sourceTree = "<group>"; };
+		2AA6F3D516D2C32E00948D6C /* MD5Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5Helpers.m; sourceTree = "<group>"; };
+		2AA6F3D616D2C32E00948D6C /* NSArray+MKHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MKHelpers.h"; sourceTree = "<group>"; };
+		2AA6F3D716D2C32E00948D6C /* NSArray+MKHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MKHelpers.m"; sourceTree = "<group>"; };
+		2AA6F3D816D2C32E00948D6C /* NSString+MKHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKHelpers.h"; sourceTree = "<group>"; };
+		2AA6F3D916D2C32E00948D6C /* NSString+MKHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKHelpers.m"; sourceTree = "<group>"; };
+		2AA6F3DB16D2C32E00948D6C /* UIColor+MKHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MKHelpers.h"; sourceTree = "<group>"; };
+		2AA6F3DC16D2C32E00948D6C /* UIColor+MKHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MKHelpers.m"; sourceTree = "<group>"; };
+		2AA6F3DD16D2C32E00948D6C /* UILabel+MKHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+MKHelpers.h"; sourceTree = "<group>"; };
+		2AA6F3DE16D2C32E00948D6C /* UILabel+MKHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+MKHelpers.m"; sourceTree = "<group>"; };
+		2AA6F3DF16D2C32E00948D6C /* UIWindow+MKHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+MKHelpers.h"; sourceTree = "<group>"; };
+		2AA6F3E016D2C32E00948D6C /* UIWindow+MKHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+MKHelpers.m"; sourceTree = "<group>"; };
+		2AA6F3F016D2C37E00948D6C /* KWGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWGradientView.h; sourceTree = "<group>"; };
+		2AA6F3F116D2C37E00948D6C /* KWGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWGradientView.m; sourceTree = "<group>"; };
+		2AA6F3F216D2C37E00948D6C /* KWLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWLineView.h; sourceTree = "<group>"; };
+		2AA6F3F316D2C37E00948D6C /* KWLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLineView.m; sourceTree = "<group>"; };
+		2AA6F3F416D2C37E00948D6C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		2AA6F3F816D2C3F800948D6C /* UIColor+KinveyWidgets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+KinveyWidgets.h"; path = "Cita/Utilities/UIColor+KinveyWidgets.h"; sourceTree = SOURCE_ROOT; };
+		2AA6F3F916D2C3F800948D6C /* UIColor+KinveyWidgets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+KinveyWidgets.m"; path = "Cita/Utilities/UIColor+KinveyWidgets.m"; sourceTree = SOURCE_ROOT; };
 		7C2A411236F24BF68A700F43 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		828258A0BC7940E6BD310385 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		90DEBB80DA534A469FC9F2AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -272,6 +313,7 @@
 				27E6B334159E3CF200280BC7 /* Backend Classes */,
 				27E6B335159E3D0300280BC7 /* Utility */,
 				27E6B339159E3D3800280BC7 /* UI Elements */,
+				2AA6F3EF16D2C37E00948D6C /* Views */,
 			);
 			name = Cita;
 			path = StatusShare;
@@ -337,11 +379,13 @@
 		27E6B335159E3D0300280BC7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				2AA6F39416D2C1A500948D6C /* iOS-UI-Utils */,
+				2AA6F3C316D2C32E00948D6C /* IOS-UI-Utils */,
 				2A510E2816D2B643001CF2FF /* GravatarStore.h */,
 				2A510E2916D2B643001CF2FF /* GravatarStore.m */,
 				2A510E2A16D2B643001CF2FF /* MD5Helpers.h */,
 				2A510E2B16D2B643001CF2FF /* MD5Helpers.m */,
+				2AA6F3F816D2C3F800948D6C /* UIColor+KinveyWidgets.h */,
+				2AA6F3F916D2C3F800948D6C /* UIColor+KinveyWidgets.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -425,16 +469,90 @@
 			name = Messages;
 			sourceTree = "<group>";
 		};
-		2AA6F39416D2C1A500948D6C /* iOS-UI-Utils */ = {
+		2AA6F3C316D2C32E00948D6C /* IOS-UI-Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2AA6F39516D2C1F000948D6C /* Button Widgets */,
-				2AA6F39616D2C1F000948D6C /* CG Helpers */,
-				2AA6F39716D2C1F000948D6C /* Foundation Categories */,
-				2AA6F39816D2C1F000948D6C /* UIKit Categories */,
+				2AA6F3C416D2C32E00948D6C /* Button Widgets */,
+				2AA6F3D016D2C32E00948D6C /* CG Helpers */,
+				2AA6F3D316D2C32E00948D6C /* Foundation Categories */,
+				2AA6F3DA16D2C32E00948D6C /* UIKit Categories */,
 			);
-			name = "iOS-UI-Utils";
+			name = "IOS-UI-Utils";
+			path = "Cita/IOS-UI-Utils";
+			sourceTree = SOURCE_ROOT;
+		};
+		2AA6F3C416D2C32E00948D6C /* Button Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				2AA6F3C516D2C32E00948D6C /* KWLinkButton.h */,
+				2AA6F3C616D2C32E00948D6C /* KWLinkButton.m */,
+				2AA6F3C716D2C32E00948D6C /* KWSocialButton.h */,
+				2AA6F3C816D2C32E00948D6C /* KWSocialButton.m */,
+				2AA6F3C916D2C32E00948D6C /* MKGradientButton.h */,
+				2AA6F3CA16D2C32E00948D6C /* MKGradientButton.m */,
+				2AA6F3CB16D2C32E00948D6C /* resources */,
+			);
+			path = "Button Widgets";
 			sourceTree = "<group>";
+		};
+		2AA6F3CB16D2C32E00948D6C /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				2AA6F3CC16D2C32E00948D6C /* facebook.png */,
+				2AA6F3CD16D2C32E00948D6C /* facebook@2x.png */,
+				2AA6F3CE16D2C32E00948D6C /* twitter.png */,
+				2AA6F3CF16D2C32E00948D6C /* twitter@2x.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		2AA6F3D016D2C32E00948D6C /* CG Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2AA6F3D116D2C32E00948D6C /* MKCGTypeHelpers.h */,
+				2AA6F3D216D2C32E00948D6C /* MKCGTypeHelpers.m */,
+			);
+			path = "CG Helpers";
+			sourceTree = "<group>";
+		};
+		2AA6F3D316D2C32E00948D6C /* Foundation Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2AA6F3D416D2C32E00948D6C /* MD5Helpers.h */,
+				2AA6F3D516D2C32E00948D6C /* MD5Helpers.m */,
+				2AA6F3D616D2C32E00948D6C /* NSArray+MKHelpers.h */,
+				2AA6F3D716D2C32E00948D6C /* NSArray+MKHelpers.m */,
+				2AA6F3D816D2C32E00948D6C /* NSString+MKHelpers.h */,
+				2AA6F3D916D2C32E00948D6C /* NSString+MKHelpers.m */,
+			);
+			path = "Foundation Categories";
+			sourceTree = "<group>";
+		};
+		2AA6F3DA16D2C32E00948D6C /* UIKit Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2AA6F3DB16D2C32E00948D6C /* UIColor+MKHelpers.h */,
+				2AA6F3DC16D2C32E00948D6C /* UIColor+MKHelpers.m */,
+				2AA6F3DD16D2C32E00948D6C /* UILabel+MKHelpers.h */,
+				2AA6F3DE16D2C32E00948D6C /* UILabel+MKHelpers.m */,
+				2AA6F3DF16D2C32E00948D6C /* UIWindow+MKHelpers.h */,
+				2AA6F3E016D2C32E00948D6C /* UIWindow+MKHelpers.m */,
+			);
+			path = "UIKit Categories";
+			sourceTree = "<group>";
+		};
+		2AA6F3EF16D2C37E00948D6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2AA6F3F016D2C37E00948D6C /* KWGradientView.h */,
+				2AA6F3F116D2C37E00948D6C /* KWGradientView.m */,
+				2AA6F3F216D2C37E00948D6C /* KWLineView.h */,
+				2AA6F3F316D2C37E00948D6C /* KWLineView.m */,
+				2AA6F3F416D2C37E00948D6C /* README.md */,
+			);
+			name = Views;
+			path = Cita/Views;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -503,10 +621,11 @@
 				2A510E6316D2B731001CF2FF /* InfoPlist.strings in Resources */,
 				2A510E6516D2B88E001CF2FF /* Cita-Info.plist in Resources */,
 				2A510E6816D2B8F3001CF2FF /* InfoPlist.strings in Resources */,
-				2AA6F39916D2C1F000948D6C /* Button Widgets in Resources */,
-				2AA6F39A16D2C1F000948D6C /* CG Helpers in Resources */,
-				2AA6F39B16D2C1F000948D6C /* Foundation Categories in Resources */,
-				2AA6F39C16D2C1F000948D6C /* UIKit Categories in Resources */,
+				2AA6F3E416D2C32E00948D6C /* facebook.png in Resources */,
+				2AA6F3E516D2C32E00948D6C /* facebook@2x.png in Resources */,
+				2AA6F3E616D2C32E00948D6C /* twitter.png in Resources */,
+				2AA6F3E716D2C32E00948D6C /* twitter@2x.png in Resources */,
+				2AA6F3F716D2C37E00948D6C /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +657,19 @@
 				2A510E3916D2B66B001CF2FF /* UIColor+KinveyHelpers.m in Sources */,
 				2A510E5116D2B691001CF2FF /* main.m in Sources */,
 				2A510E5D16D2B712001CF2FF /* CitaTests.m in Sources */,
+				2AA6F3E116D2C32E00948D6C /* KWLinkButton.m in Sources */,
+				2AA6F3E216D2C32E00948D6C /* KWSocialButton.m in Sources */,
+				2AA6F3E316D2C32E00948D6C /* MKGradientButton.m in Sources */,
+				2AA6F3E816D2C32E00948D6C /* MKCGTypeHelpers.m in Sources */,
+				2AA6F3E916D2C32E00948D6C /* MD5Helpers.m in Sources */,
+				2AA6F3EA16D2C32E00948D6C /* NSArray+MKHelpers.m in Sources */,
+				2AA6F3EB16D2C32E00948D6C /* NSString+MKHelpers.m in Sources */,
+				2AA6F3EC16D2C32E00948D6C /* UIColor+MKHelpers.m in Sources */,
+				2AA6F3ED16D2C32E00948D6C /* UILabel+MKHelpers.m in Sources */,
+				2AA6F3EE16D2C32E00948D6C /* UIWindow+MKHelpers.m in Sources */,
+				2AA6F3F516D2C37E00948D6C /* KWGradientView.m in Sources */,
+				2AA6F3F616D2C37E00948D6C /* KWLineView.m in Sources */,
+				2AA6F3FA16D2C3F800948D6C /* UIColor+KinveyWidgets.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
